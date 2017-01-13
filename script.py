@@ -23,7 +23,7 @@ def get_opts():
 
     """Get script options
 
-    This method sets the script options
+    This method sets the global script options
 
     """
 
@@ -66,6 +66,12 @@ def get_opts():
 
 
 def run_script():
+
+    """Run script
+
+    This method reads the input catalogues and calculates the Q metric value
+
+    """
 
     psf_true = np.load(opts.psf_true)
     print 'True PSFs:', opts.psf_true
