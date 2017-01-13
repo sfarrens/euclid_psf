@@ -18,7 +18,7 @@ To execute the code run
 $ ./script.py -i INTERPOLATED_PSF_FILE.npy -t TRUE_PSF_FILE.npy
 ```
 
-This script will output the Q value in the terminal.
+This script will output the Q value to the terminal.
 
 All of the script options can be displayed by running
 
