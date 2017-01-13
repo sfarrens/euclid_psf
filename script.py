@@ -46,6 +46,22 @@ def get_opts():
     required.add_argument('-t', '--psf_true', dest='psf_true', required=True,
                           help='True PSF images file.')
 
+    optional.add_argument('-e', '--target_ellip', dest='target_ellip',
+                          default=2e-4, type=float, required=False,
+                          help='Target PSF ellipticity stability.')
+
+    optional.add_argument('-r', '--target_size', dest='target_size',
+                          default=1e-3, type=float, required=False,
+                          help='Target PSF size stability.')
+
+    optional.add_argument('-n', '--eta', dest='eta',
+                          default=2e3, type=int, required=False,
+                          help='Normalisation parameter.')
+
+    optional.add_argument('-s', '--sigma', dest='sigma',
+                          default=1, type=int, required=False,
+                          help='Dispersion due to pixel noise.')
+
     return parser.parse_args()
 
 
@@ -57,7 +73,8 @@ def run_script():
     psf_int = np.load(opts.psf_int)
     print 'Interpolated PSFs:', opts.psf_int
 
-    print 'Q Value:', get_q(psf_int, psf_true)
+    print 'Q Value:', get_q(psf_int, psf_true, opts.target_ellip,
+                            opts.target_size, opts.eta, opts.sigma)
 
 
 def main():

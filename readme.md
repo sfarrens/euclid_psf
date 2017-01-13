@@ -20,6 +20,14 @@ $ ./script.py -i INTERPOLATED_PSF_FILE.npy -t TRUE_PSF_FILE.npy
 
 This script will output the Q value in the terminal.
 
+All of the script options can be displayed by running
+
+```bash
+$ ./script --help
+```
+
 ### Q Metric
 
 The metric used was derived from that of [Mandelbaum et al. (2015)](https://arxiv.org/pdf/1412.1825v2.pdf) by T. Kuntzer.
+
+The default target values for the PSF ellipticity and size stabilities are **2e-4** and **1e-3** respectively, as decribed in the [Euclid Redbook](https://arxiv.org/abs/1110.3193).
