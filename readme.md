@@ -1,4 +1,4 @@
-# PSF Interpolation Tests
+# PSF Interpolation Benchmark Exercise (PIBE)
 
 > Author: **Samuel Farrens**
 
